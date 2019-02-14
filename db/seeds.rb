@@ -9,3 +9,25 @@
      open_date: "Time.zone.now")
 end
 
+5.times do |n|
+  Review.create(
+    rate: 10,
+    review: "test",
+    product_id: "#{n+1}",
+    created_at: Time.zone.now,
+    updated_at: Time.zone.now,
+    user_id: 1
+  )
+end
+
+5.times do
+  User.create(
+    email: "hoge@hoge.jp",
+    password: "hogehoge",
+    password_confirmation: "hogehoge",
+    created_at: Time.zone.now,
+    updated_at: Time.zone.now,
+    nickname: "hoge"
+  )
+end
+
